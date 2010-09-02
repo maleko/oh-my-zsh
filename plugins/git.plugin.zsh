@@ -1,5 +1,7 @@
 # Aliases
 alias g='git status'
+alias gst='git stash'
+alias gsta='git stash apply'
 alias ga='git add'
 alias l='git log'
 alias d='git diff'
@@ -17,6 +19,7 @@ alias gcount='git shortlog -sn'
 alias gcp='git cherry-pick'
 alias gco='git checkout'
 alias gcom='git checkout master'
+alias gx='gitx'
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
