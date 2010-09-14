@@ -1,3 +1,8 @@
+# I'm just assuming I'm using bundler with rails 3 now...
+alias be='bundle exec'
+alias rc='bundle exec rails console'
+alias rg='bundle exec rails generate'
+alias rs='bundle exec rails server'
 
 alias sd='ruby script/destroy'
 alias sp='ruby script/plugin'
@@ -7,7 +12,7 @@ alias sd='ruby script/server --debugger'
 alias devlog='tail -f log/development.log'
 
 sc () {
-  if [ -f ./script/rails ]; then 
+  if [ -f ./script/rails ]; then
     rails console $argv
   else
     ./script/console $argv
@@ -15,7 +20,7 @@ sc () {
 }
 
 ss () {
-  if [ -f ./script/rails ]; then 
+  if [ -f ./script/rails ]; then
     ./script/rails server $argv
   else
     ./script/server $argv
@@ -23,7 +28,7 @@ ss () {
 }
 
 gen () {
-  if [ -f ./script/rails ]; then 
+  if [ -f ./script/rails ]; then
     ./script/rails g $argv
   else
     ./script/generate $argv
