@@ -20,6 +20,8 @@ alias gcp='git cherry-pick'
 alias gco='git checkout'
 alias gcom='git checkout master'
 alias gx='gitx'
+alias gsr='git svn rebase'
+alias gsd='git svn dcommit'
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'

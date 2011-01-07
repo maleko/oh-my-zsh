@@ -1,2 +1,5 @@
 alias hp='git push heroku master'
 alias hc='heroku console'
+alias h='heroku'
+alias hdp='heroku db:push'
+alias hdl='heroku db:pull'

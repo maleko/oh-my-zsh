@@ -1,5 +1,4 @@
 # I'm just assuming I'm using bundler with rails 3 now...
-alias be='bundle exec'
 alias rc='bundle exec rails console'
 alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'

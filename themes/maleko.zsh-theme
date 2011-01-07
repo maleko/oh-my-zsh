@@ -30,7 +30,7 @@ function pat_prompt {
   #   prompt=" $prompt"
   # done
 
-  prompt="%{%F{green}%}%~$prompt%{%F{red}%}$(rvm_prompt_info)%{$reset_color%} $(git_prompt_info)"
+  prompt="%{%F{green}%}%~$prompt%{$reset_color%}$(git_prompt_info)"
 
   echo $prompt
 }
@@ -38,3 +38,4 @@ function pat_prompt {
 setopt prompt_subst
 
 PROMPT='$(pat_prompt)%(?,%{%F{green}%},%{%F{red}%}) 李:%{$reset_color%}'
+RPROMPT='%{%F{red}%}$(rvm_prompt_info)%{$reset_color%}'
