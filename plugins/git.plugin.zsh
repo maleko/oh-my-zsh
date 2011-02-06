@@ -2,6 +2,7 @@
 alias g='git status'
 alias gst='git stash'
 alias gsta='git stash apply'
+alias gstp='git stash pop'
 alias ga='git add'
 alias l='git log'
 alias d='git diff'
@@ -35,7 +36,7 @@ function current_branch() {
   echo ${ref#refs/heads/}
 }
 
-# these aliases take advangate of the previous function
+# these aliases take advantage of the previous function
 alias ggpull='git pull origin $(current_branch)'
 alias ggpush='git push origin $(current_branch)'
 alias ggpnp='git pull origin $(current_branch) && git push origin $(current_branch)'
