@@ -23,6 +23,7 @@ alias gcom='git checkout master'
 alias gx='gitx'
 alias gsr='git svn rebase'
 alias gsd='git svn dcommit'
+alias ghist='git log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short'
 
 # Git and svn mix
 alias git-svn-dcommit-push='git svn dcommit && git push github master:svntrunk'
