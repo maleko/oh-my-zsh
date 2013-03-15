@@ -9,6 +9,11 @@ alias ssp='ruby script/spec'
 alias rdbm='rake db:migrate'
 alias sd='ruby script/server --debugger'
 alias devlog='tail -f log/development.log'
+alias zta='zeus test spec/**'
+alias zt='zeus test'
+alias zs='zeus start'
+alias zsc='zeus console'
+alias zc='zeus cucumber'
 
 sc () {
   if [ -f ./script/rails ]; then

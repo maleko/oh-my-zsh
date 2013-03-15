@@ -27,8 +27,8 @@ bindkey ' ' magic-space    # also do history expansion on space
 #
 #bindkey '^[[A' up-line-or-search
 #bindkey '^[[B' down-line-or-search
-#bindkey '^[^[[C' emacs-forward-word
-#bindkey '^[^[[D' emacs-backward-word
+bindkey '^[^[[C' emacs-forward-word
+bindkey '^[^[[D' emacs-backward-word
 #
 #bindkey -s '^X^Z' '%-^M'
 #bindkey '^[e' expand-cmd-path
