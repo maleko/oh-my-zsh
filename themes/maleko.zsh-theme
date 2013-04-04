@@ -37,5 +37,5 @@ function pat_prompt {
 
 setopt prompt_subst
 
-PROMPT='$(pat_prompt)%(?,%{%F{green}%},%{%F{red}%}) 李:%{$reset_color%}'
+PROMPT='$(pat_prompt)%(?,%{%F{green}%},%{%F{red}%}) 🚀 李:%{$reset_color%}'
 RPROMPT='%{%F{red}%}$(rvm_prompt_info)%{$reset_color%}'
