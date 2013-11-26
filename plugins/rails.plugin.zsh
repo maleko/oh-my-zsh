@@ -1,20 +1,20 @@
 # I'm just assuming I'm using bundler with rails 3 now...
-rc='bundle exec rails console'
-rg='bundle exec rails generate'
-rs='bundle exec rails server'
+alias rc='bundle exec rails console'
+alias rg='bundle exec rails generate'
+alias rs='bundle exec rails server'
 
-sd='ruby script/destroy'
-sp='ruby script/plugin'
-ssp='ruby script/spec'
-rdbm='rake db:migrate'
-sd='ruby script/server --debugger'
-devlog='tail -f log/development.log'
+alias sd='ruby script/destroy'
+alias sp='ruby script/plugin'
+alias ssp='ruby script/spec'
+alias rdbm='rake db:migrate'
+alias sd='ruby script/server --debugger'
+alias devlog='tail -f log/development.log'
 
-zta='zeus test spec/**'
-zt='zeus test'
-zs='zeus start'
-zc='zeus console'
-zcuke='zeus cucumber'
+alias zta='zeus test spec/**'
+alias zt='zeus test'
+alias zs='zeus start'
+alias zc='zeus console'
+alias zcuke='zeus cucumber'
 
 sc () {
   if [ -f ./script/rails ]; then
