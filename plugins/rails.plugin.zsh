@@ -3,6 +3,9 @@ alias rc='bundle exec rails console'
 alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'
 
+alias rsp='bin/rspec'
+alias cuke='bin/cucumber'
+
 alias sd='ruby script/destroy'
 alias sp='ruby script/plugin'
 alias ssp='ruby script/spec'

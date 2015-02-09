@@ -10,3 +10,19 @@ alias BCA=/Users/marc/workspace/billcap/api
 alias BCT=/Users/marc/workspace/billcap/template
 
 alias bcpg="ssh billcap@billcap_db2 \"sudo -u postgres psql -t -c 'SELECT now() - pg_last_xact_replay_timestamp();'\""
+alias bpe="pull_engines"
+
+pull_engines() {
+
+  mypath=$PWD
+
+  for repository in ~/workspace/billcap/engines/*; do
+    cd $repository
+    echo "Pulling $repository"
+    git up
+  done
+
+  cd $mypath
+
+}
+
