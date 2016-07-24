@@ -4,13 +4,10 @@
 # brainstormr=/Users/robbyrussell/Projects/development/planetargon/brainstormr
 #
 alias BCW=/Users/marc/workspace/billcap/billcap
+alias BCC=/Users/marc/workspace/billcap/chef-repo
 alias BC=/Users/marc/workspace/billcap
-alias BCS=/Users/marc/workspace/billcap/engines/simply
-alias BCSP=/Users/marc/workspace/billcap/engines/space
-alias BCE=/Users/marc/workspace/billcap/engines/energy-umpire
-alias BCC=/Users/marc/workspace/billcap/engines/costing
-alias BCCO=/Users/marc/workspace/billcap/engines/core
-
+alias BCA=/Users/marc/workspace/billcap/api
+alias BCT=/Users/marc/workspace/billcap/template
 
 alias bcpg="ssh billcap@billcap_db2 \"sudo -u postgres psql -t -c 'SELECT now() - pg_last_xact_replay_timestamp();'\""
 alias bpe="pull_engines"

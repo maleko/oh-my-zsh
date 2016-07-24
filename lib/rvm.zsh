@@ -1,13 +1,7 @@
-function _update_ruby_version()
-{
-    typeset -g ruby_version=''
-    if which rvm-prompt &> /dev/null; then
-      ruby_version="$(rvm-prompt i v g)"
-      rvm-prompt i v g
-    else
-      if which rbenv &> /dev/null; then
-        ruby_version="$(rbenv version | sed -e "s/ (set.*$//")"
-      fi
-    fi
+# get the name of the branch we are on
+function rvm_prompt_info() {
+  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
+  echo "($ruby_version)"
 }
-chpwd_functions+=(_update_ruby_version)
+
+
