@@ -18,11 +18,15 @@ pull_engines() {
 
   for repository in ~/workspace/billcap/engines/*; do
     cd $repository
-    echo "Pulling $repository"
+    echo "--- Pulling $repository ---"
     git up
+    echo "--- Bundling $repository ---"
+    bundle
   done
 
   cd $mypath
 
 }
+
+alias shove='git pull --rebase && bundle && be rake && git push'
 
