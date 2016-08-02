@@ -192,13 +192,12 @@ prompt_time() {
 }
 
 prompt_rvm() {
+  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
   prompt_segment_right red white "$ruby_version "
 }
 
 build_rprompt() {
-  if [ "$ZSH_2000_DISABLE_RVM" != 'true' ];then
-    prompt_rvm
-  fi
+  prompt_rvm
   prompt_time
 }
 
