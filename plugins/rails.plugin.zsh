@@ -1,9 +1,7 @@
-# I'm just assuming I'm using bundler with rails 3 now...
 alias rc='bundle exec rails console'
 alias rg='bundle exec rails generate'
 alias rs='bundle exec rails server'
 
-alias rsp='bundle exec rspec'
 alias cuke='bin/cucumber'
 
 alias rake='bundle exec rake'
@@ -14,12 +12,6 @@ alias ssp='ruby script/spec'
 alias rdbm='rake db:migrate'
 alias sd='ruby script/server --debugger'
 alias devlog='tail -f log/development.log'
-
-alias zta='zeus test spec/**'
-alias zt='zeus test'
-alias zs='zeus start'
-alias zc='zeus console'
-alias zcuke='zeus cucumber'
 
 sc () {
   if [ -f ./script/rails ]; then
