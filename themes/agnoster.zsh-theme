@@ -27,7 +27,7 @@
 
 CURRENT_BG='NONE'
 if [[ -z "$PRIMARY_FG" ]]; then
-	PRIMARY_FG=white
+	PRIMARY_FG=black
 fi
 
 # Characters
