@@ -48,3 +48,4 @@ git-new() {
   git commit -m "Added .gitignore."
 }
 
+alias kraken='open -na "GitKraken" --args -p $(pwd)'

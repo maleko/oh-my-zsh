@@ -145,13 +145,20 @@ prompt_time() {
   prompt_segment_right white black '%D{%H:%M:%S} '
 }
 
-prompt_rvm() {
-  ruby_version=$(~/.rvm/bin/rvm-prompt 2> /dev/null) || return
+prompt_ruby_version() {
+  local ruby_version=$(rbenv_version)
   prompt_segment_right red white "$ruby_version "
 }
 
+prompt_node_version() {
+  local node_version="$(nvm version)"
+  prompt_segment_right yellow black "$node_version "
+}
+
+
 right_prompt() {
-  prompt_rvm
+  prompt_node_version
+  prompt_ruby_version
   prompt_time
 }
 
