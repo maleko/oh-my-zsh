@@ -1,21 +1,9 @@
-# place this after nvm initialization!
-autoload -U add-zsh-hook
-load-nvmrc() {
-  local node_version="$(nvm version)"
-  local nvmrc_path="$(nvm_find_nvmrc)"
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
-
-    if [ "$nvmrc_node_version" = "N/A" ]; then
-      nvm install
-    elif [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use
-    fi
-  elif [ "$node_version" != "$(nvm version default)" ]; then
-    echo "Reverting to nvm default version"
-    nvm use default
-  fi
+# get the node.js version
+function nvm_prompt_info() {
+  [[ -f "$NVM_DIR/nvm.sh" ]] || return
+  local nvm_prompt
+  nvm_prompt=$(node -v 2>/dev/null)
+  [[ "${nvm_prompt}x" == "x" ]] && return
+  nvm_prompt=${nvm_prompt:1}
+  echo "${ZSH_THEME_NVM_PROMPT_PREFIX}${nvm_prompt}${ZSH_THEME_NVM_PROMPT_SUFFIX}"
 }
-add-zsh-hook chpwd load-nvmrc
-load-nvmrc
